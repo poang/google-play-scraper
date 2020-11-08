@@ -92,51 +92,6 @@ def download_apk(url,namelist):
         fp.write(respone)
 
 if __name__ == '__main__':
-#     url_lists = [] #保存下载url列表
-#     app_id = []  #保存的下载apk包名(id)
-#     app_name_list = [] #保存app名称
-#     describe_list = [] #保存描述
-#     privacy_list = [] #保存隐私协议url
-#     q = Queue()  # 定义队列
-#     url_lists2 = []
-#     url = 'https://play.google.com/store/apps/details?id=com.xiaomi.smarthome'
-#     url_lists2.append(url)  #将当前页面添加到保存列表中
-#     #url_lists.append(url)
-#     page = loadhtml(url)
-#     id1 = get_id(url)
-#    # app_id.append(id1)
-#     name,href,describation = Loadpara(page)
-#     # app_name_list.append(name)
-#     # privacy_list.append(href)
-#     # describe_list.append(describation)
-#     q.put(url)  # 将url入队列
-#     while len(url_lists2)<2300:
-#         url1 = q.get()  # 将url出队列
-#         more_url = get_moreurl(url1)  # 通过当前url截取查看更多的url
-#         list = get_cluster(more_url)  # 通过查看更多url获取更多appurl
-#         url_lists2.extend(list)  # 合并list
-#         for url4 in url_lists2:
-#             if url4 not in url_lists:
-#                 url_lists.append(url4)
-#         for url in list:
-#             q.put(url)
-# #    apk_url_list = get_cluster(url1)  #获取米家更多相关的url列表
-#     for url2 in url_lists:
-#         page = loadhtml(url2)
-#         name, href, describation = Loadpara(page)
-#         apk_id = get_id(url2)
-#         app_id.append(apk_id)
-#         app_name_list.append(name)
-#         #url_lists.append(url2)
-#         privacy_list.append(href)
-#         describe_list.append(describation)
-#         print(name)
-
-
-    #     print("正在访问")
-    # dataframe = pd.DataFrame({'Apk_Id':app_id,'App_Name':app_name_list,'Url':url_lists,'describation':describe_list,'Privacy Policy':privacy_list})
-    # dataframe.to_csv("C:\\Users\\poang\\PycharmProjects\\爬虫学习\\data.csv",index=False)  #C:\\Users\\poang\\PycharmProjects\\爬虫学习\\data.csv
-    #
     driver = webdriver.Chrome(executable_path=r"C:\Users\poang\Documents\Tencent Files\517434308\FileRecv\chromedriver.exe")
     path = 'C:\\Users\\poang\\PycharmProjects\\爬虫学习\\iot_apk2.csv'
     df = pd.read_csv(path,encoding='unicode_escape')
